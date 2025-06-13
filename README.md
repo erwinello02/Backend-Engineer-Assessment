@@ -49,16 +49,22 @@ json:
 #### Authentication login to generate token.
 POST - http://localhost:8080/api/auth-login
 
-
 QueryParam username and password
 
 `username` :`james`
 
 `password` :`bond007`
 
+sample generated token `eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZGFtIiwiaWF0IjoxNzQ5Nzk3MTIxLCJleHAiOjE3NDk4MDA3MjF9.cQ8R52WLjOzIz2egFQ37aSOC7F8ITrODCji0tFDAysE`
+
+
 #### Get github users with redis cache
 
 GET - http://localhost:8080/api/github-users
+
+Headers: 
+
+Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZGFtIiwiaWF0IjoxNzQ5Nzk3MTIxLCJleHAiOjE3NDk4MDA3MjF9.cQ8R52WLjOzIz2egFQ37aSOC7F8ITrODCji0tFDAysE`
 
 RequestBody type with list of string json
 
